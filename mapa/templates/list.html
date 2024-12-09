@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Listagem de Mapas</h1>
+  <ul>
+    {% for mapa in mapas %}
+      <li>
+        <a href="{% url 'mapa_detail' mapa.pk %}">{{ mapa.titulo }}</a>
+        ({{ mapa.criado_em }})
+      </li>
+    {% endfor %}
+  </ul>
+  <p><a href="{% url 'mapa_upload' %}">Enviar novo mapa</a></p>
+{% endblock %}

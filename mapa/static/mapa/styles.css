@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+  margin-bottom: 20px;
+  background-color: #002b17;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(1, 46, 16, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+img{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.05);
+}
+a {
+  text-decoration: none;
+  color: #013a41;
+  transition: color 0.3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+a:hover {
+  color: #032e8a54;
+}
+  header {
+    background-color: #007981;
+    color: #007981;
+    padding: 60px 80px;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: #000000;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    color: #f1ed00;
+  }
+  
+  section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #home {
+    background: #000000;
+    color: #007981;
+    padding: 60px ;
+  }
+  
+  #home button {
+    background-color: #ffd700;
+    color: #f5de13;
+    padding: 50px 70px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+  }
+  
+  #home button:hover {
+    background-color: #ffaa00;
+  }
+
+  
+  form {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #007981;
+  }
+  
+  form button {
+    background-color: #ffffff;
+    color: #007981;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #004146;
+    
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #011e36;
+    color: #003330;
+    font-size: 0.9rem;
+}
+
+  .content {
+    padding: 20px;
+}

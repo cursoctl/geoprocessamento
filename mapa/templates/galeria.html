@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Galeria</h1>
+<div class="gallery">
+    {% for imagem in imagens %}
+        <div class="image-item">
+            <!-- Acesse a URL da imagem corretamente -->
+            <img src="{{ imagem.imagem.url }}" alt="Imagem {{ imagem.id }}" width="200">
+            <p>ID: {{ imagem.id }}</p>
+            {% if request.user.is_staff %}  <!-- Verifica se o usuário é administrador -->
+                <a href="{% url 'admin:app_imagem_change' imagem.id %}">Editar no Admin</a>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

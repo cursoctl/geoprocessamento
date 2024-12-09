@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site GeoProcessamento</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mapa/styles.css' %}">
+    {% block styles %}{% endblock %}
+
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'mapa' %}">mapa</a></li>
+                <li><a href="{% url 'galeria' %}">Galeria</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+                <li><a href="{% url 'servicos' %}">Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block conteudo %}{% endblock %}
+    </main>
+    <footer>
+        &copy; 2024 GeoProcessamento
+    </footer>
+</body>
+</html>
