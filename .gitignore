@@ -1,6 +1,21 @@
+# Python
 *.pyc
-__pycache__/
+__pycache__
+
+# Django
 db.sqlite3
-.env
-media/
-staticfiles/
+*.log
+*.pot
+*.pyc
+
+# Ambiente virtual
+venv/
+env/
+
+# Arquivos de configuração sensíveis
+*.env
+config/.env
+
+# Outros
+*.bak
+*.swp
