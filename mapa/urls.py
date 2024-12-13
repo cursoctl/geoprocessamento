@@ -3,7 +3,8 @@ from django.conf.urls.static import static
 from django.urls import path
 from . import views
 
-# URLs principais
+
+# URLs principais 
 main_patterns = [
     path('', views.index, name='index'),  # Página inicial
     path('galeria/', views.galeria, name='galeria'),  # Galeria de imagens
@@ -19,4 +20,9 @@ mapa_patterns = [
 ]
 
 # Combinação de todas as URLs
-urlpatterns = main_patterns + mapa_patterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = main_patterns + mapa_patterns
+
+# Adiciona URLs para arquivos de mídia apenas se estiver no modo de desenvolvimento
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

@@ -31,11 +31,12 @@ def mapa_view(request):
     return render(request, 'mapa.html', {'mapa': mapa_html})
 
 def index(request):
-    imagens = Imagem.objects.all()[:4]  # Mostra as primeiras 4 imagens
+    imagens = Imagem.objects.all()[:4]  # Obtém as primeiras 4 imagens
     return render(request, 'index.html', {'imagens': imagens})
 
+
 def galeria(request):
-    imagens = Imagem.objects.all()
+    imagens = Imagem.objects.all()  # Obtém todas as imagens
     return render(request, 'galeria.html', {'imagens': imagens})
 
 def contato(request):

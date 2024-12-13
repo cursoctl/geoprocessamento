@@ -1,22 +1,19 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-    <section class="home">
-        <h1>Bem-vindo ao Site de Geoprocessamento</h1>
-        <p>Explore nossos mapas e imagens.</p>
-        <div class="image-grid">
-            {% for imagem in imagens %}
+<section class="home">
+    <h1>Bem-vindo ao Site de Geoprocessamento</h1>
+    <p>Explore nossos mapas e imagens.</p>
+    <div class="image-grid">
+        {% for imagem in imagens %}
+            <div class="image-card">
                 {% if imagem.photo %}
-                    <div class="image-card">
-                        <img src="{{ imagem.photo.url }}" alt="{{ imagem.photo.name }}">
-                        <h2>{{ imagem.photo.name|default:"Sem título" }}</h2>
-                    </div>
+                    <img src="{{ imagem.photo.url }}" alt="{{ imagem.photo.name }}">
+                    <h2>{{ imagem.photo.name|default:"Sem título" }}</h2>
                 {% else %}
-                    <div class="image-card">
-                        <p>Imagem indisponível</p>
-                    </div>
+                    <p>Imagem indisponível</p>
                 {% endif %}
-            {% endfor %}
-        </div>
-    </section>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
-``

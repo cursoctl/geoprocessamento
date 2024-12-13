@@ -18,10 +18,12 @@ class Mapa(models.Model):
     def __str__(self):
         return self.nome
 
+
 class Imagem(models.Model):
-    photo = models.ImageField(upload_to='imagens/',blank=True,null=True)
+    photo = models.ImageField(upload_to='imagens/', blank=True, null=True)
+
     def __str__(self):
-        return str(self.imagem.name)  # Corrigido para acessar corretamente o campo 'imagem'
+        return str(self.photo.name)  # Retorna o nome do arquivo da imagem
 
 class Servico(models.Model):
     nome = models.CharField(max_length=255)

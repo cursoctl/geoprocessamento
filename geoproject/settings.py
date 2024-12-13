@@ -113,7 +113,7 @@ USE_TZ = True
 import os
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Ou o diretório desejado para armazenar arquivos de mídia
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Configuração para arquivos estáticos (se necessário)
 STATIC_URL = '/static/'
