@@ -1,15 +1,15 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import Mapa, Imagem, Servico,Projeto
-
+from django.db import models
 
 class ProjetoAdmin(admin.ModelAdmin):
     list_display = ('titulo','descricao','link')
     search_fields = ('titulo',)
 class ImagemAdmin(admin.ModelAdmin):
-    # Corrigindo o list_display para usar o campo 'imagem' corretamente
-    list_display = ('id', 'get_imagem_thumbnail', 'get_imagem_url')  # Alteração para exibir a miniatura e URL
-    list_filter = ('imagem',)  # Filtrando pelo campo 'imagem'
+
+    nome = models.CharField(max_length=100)
+    imagem = models.ImageField(upload_to='imagens/')
 
     # Função para exibir a miniatura da imagem no admin
     def get_imagem_thumbnail(self, obj):

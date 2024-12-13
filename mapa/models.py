@@ -19,8 +19,7 @@ class Mapa(models.Model):
         return self.nome
 
 class Imagem(models.Model):
-    imagem = models.ImageField(upload_to='imagens/')  # Corrigido para minúsculo
-
+    photo = models.ImageField(upload_to='imagens/',blank=True,null=True)
     def __str__(self):
         return str(self.imagem.name)  # Corrigido para acessar corretamente o campo 'imagem'
 

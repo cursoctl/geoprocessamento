@@ -3,12 +3,20 @@ from django.conf.urls.static import static
 from django.urls import path
 from . import views
 
-urlpatterns = [
-    path('', views.index, name='index'),
-    path('mapa/', views.mapa_view, name='mapa'),
-    path('galeria/', views.galeria, name='galeria'),
-    path('contato/', views.contato, name='contato'),
-    path('servicos/', views.servicos, name='servicos'),
-    path('criar/mapa/', views.criar_mapa, name='criar_mapa'),
-    path('mapa/upload/', views.mapa_upload, name='mapa_upload'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# URLs principais
+main_patterns = [
+    path('', views.index, name='index'),  # Página inicial
+    path('galeria/', views.galeria, name='galeria'),  # Galeria de imagens
+    path('contato/', views.contato, name='contato'),  # Página de contato
+    path('servicos/', views.servicos, name='servicos'),  # Lista de serviços
+]
+
+# URLs de funcionalidades relacionadas a mapas
+mapa_patterns = [
+    path('mapa/', views.mapa_view, name='mapa'),  # Visualização de mapa
+    path('criar/mapa/', views.criar_mapa, name='criar_mapa'),  # Criar novo mapa
+    path('mapa/upload/', views.mapa_upload, name='mapa_upload'),  # Upload de mapa
+]
+
+# Combinação de todas as URLs
+urlpatterns = main_patterns + mapa_patterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
