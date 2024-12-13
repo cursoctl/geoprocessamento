@@ -1,54 +1,53 @@
-/* ================================ */
-/*         VARIÁVEIS GLOBAIS        */
-/* ================================ */
-:root {
-  --primary-bg: #f8f9fa;
-  --primary-text: #212529;
-  --secondary-bg: #343a40;
-  --highlight-color: #17a2b8;
-  --hover-highlight: #138496;
-  --link-color: #007bff;
-  --link-hover-color: #0056b3;
-  --header-bg: #495057;
-  --footer-bg: #343a40;
-  --footer-text: #f8f9fa;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --fade-in-duration: 0.5s;
-}
-
-/* ================================ */
-/*         RESET E BASE GERAL       */
-/* ================================ */
+/* Reset básico e configuração de box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  /* Transição suave aplicada globalmente */
 }
 
+/* Corpo da página */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: var(--primary-bg);
-  color: var(--primary-text);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  /* Melhorando a legibilidade */
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* Cabeçalho */
+header {
+  background-color: #007981;
+  color: white;
+  padding: 40px 80px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Adicionando sombra suave */
 }
 
-a {
+header nav a {
+  color: #ffffff;
+  margin: 0 20px;
   text-decoration: none;
-  color: var(--link-color);
-  transition: color 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Melhorando a legibilidade do menu */
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Transição para hover mais fluida */
 }
 
-a:hover {
-  color: var(--link-hover-color);
+header nav a:hover {
+  color: #474736;
+  transform: scale(1.1);
+  /* Efeito de zoom suave no hover */
 }
 
+/* Animações */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -59,163 +58,151 @@ a:hover {
   }
 }
 
-/* ================================ */
-/*         CABEÇALHO E NAV          */
-/* ================================ */
-header {
-  background-color: var(--header-bg);
-  color: var(--primary-bg);
-  padding: 20px;
-  text-align: center;
-}
-
-header nav ul {
+/* Navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
-header nav a {
-  color: var(--primary-bg);
-  font-weight: bold;
-}
-
-header nav a:hover {
-  color: var(--highlight-color);
-}
-
-/* ================================ */
-/*         ÁREA PRINCIPAL           */
-/* ================================ */
-main {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-section {
-  padding: 40px 20px;
-}
-
-#home {
-  background-color: var(--highlight-color);
-  color: var(--primary-bg);
-  padding: 60px;
-}
-
-#home button {
-  background-color: var(--hover-highlight);
-  color: var(--primary-bg);
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2em;
-  transition: background 0.3s ease;
-  border-radius: 5px;
-}
-
-#home button:hover {
-  background-color: var(--link-color);
-}
-
-/* ================================ */
-/*         LISTA E ITENS            */
-/* ================================ */
-li {
-  margin-bottom: 20px;
-  background-color: var(--secondary-bg);
+nav li {
+  margin: 0 15px;
+  background-color: #002b17;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 4px 8px rgba(1, 46, 16, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn var(--fade-in-duration) ease-in-out;
-  color: var(--primary-bg);
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-li:hover {
-  transform: scale(1.02);
+nav li:hover {
+  transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+a {
+  text-decoration: none;
+  color: #013a41;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #032e8a;
+}
+
+/* Imagens */
 img {
   width: 100%;
-  height: 150px;
+  height: auto;
+  max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 img:hover {
   transform: scale(1.05);
+  filter: brightness(0.8);
+  /* Efeito de brilho */
 }
 
-/* ================================ */
-/*         FORMULÁRIOS              */
-/* ================================ */
-form {
-  max-width: 400px;
-  margin: 20px auto;
-  background-color: var(--primary-bg);
-  padding: 20px;
+/* Home */
+#home {
+  background: #000000;
+  color: #007981;
+  padding: 60px;
+  text-align: center;
+}
+
+#home button {
+  background-color: #ffd700;
+  color: #f5de13;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
+  transition: background 0.3s, transform 0.3s;
+}
+
+#home button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.1);
+}
+
+/* Formulários */
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
-  color: var(--primary-text);
 }
 
 form input,
 form textarea,
 form button {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid var(--link-color);
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #007981;
+  font-size: 1em;
 }
 
 form button {
-  background-color: var(--highlight-color);
-  color: var(--primary-bg);
+  background-color: #007981;
+  color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s, transform 0.3s;
 }
 
 form button:hover {
-  background-color: var(--hover-highlight);
-  color: var(--primary-bg);
+  background-color: #004146;
+  transform: scale(1.05);
 }
 
-/* ================================ */
-/*         RODAPÉ                   */
-/* ================================ */
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
+  background-color: #011e36;
+  color: #003330;
   font-size: 0.9rem;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ================================ */
-/*         RESPONSIVIDADE           */
-/* ================================ */
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Conteúdo */
+.content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  #home button {
-    padding: 15px;
-    font-size: 1em;
-  }
+/* Scroll suave e efeitos modernos */
+html {
+  scroll-behavior: smooth;
+}
 
-  form {
-    padding: 0 10px;
-  }
+/* Efeitos de scroll (parallax ou similar) */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  /* Efeito de movimento no scroll */
 }
