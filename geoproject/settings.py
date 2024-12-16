@@ -112,17 +112,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 import os
 
+# Configuração para arquivos de mídia
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Configuração para arquivos estáticos (se necessário)
+# Configuração para arquivos estáticos
 STATIC_URL = '/static/'
-
-# Adiciona pastas de arquivos estáticos (opcional, se precisar de outros diretórios estáticos fora do app)
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),  # Verifique se esta pasta existe
 ]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
