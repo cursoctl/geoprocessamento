@@ -1,208 +1,146 @@
-/* Reset básico e configuração de box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
-  /* Transição suave aplicada globalmente */
-}
+/* Fontes importadas do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Corpo da página */
+/* Estilos básicos */
 body {
-  font-family: 'Arial', Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  line-height: 1.6;
-  /* Melhorando a legibilidade */
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #f4f7f6;
+    /* Fundo claro e neutro */
+    color: #333;
+    /* Texto escuro para boa legibilidade */
 }
 
-/* Cabeçalho */
 header {
-  background-color: #007981;
-  color: white;
-  padding: 40px 80px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* Adicionando sombra suave */
+    text-align: center;
+    padding: 30px;
+    background-color: #005b6b;
+    /* Azul claro*/
+    color: #ffffff;
+
+    border-bottom: 3px solid #ff6f61;
+    /* Cor vibrante de destaque */
 }
 
-header nav a {
-  color: #ffffff;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  /* Melhorando a legibilidade do menu */
-  letter-spacing: 1px;
-  transition: color 0.3s ease, transform 0.3s ease;
-  /* Transição para hover mais fluida */
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    animation: fadeIn 1s ease-in-out;
 }
 
-header nav a:hover {
-  color: #474736;
-  transform: scale(1.1);
-  /* Efeito de zoom suave no hover */
-}
-
-/* Animações */
+/* Animação de fade-in */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+    from {
+        opacity: 0;
+    }
 
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Navegação */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-nav li {
-  margin: 0 15px;
-  background-color: #002b17;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(1, 46, 16, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 0.5s ease-in-out;
+li {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    /* Fundo branco para cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    /* Sombras suaves */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-nav li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-a {
-  text-decoration: none;
-  color: #013a41;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #032e8a;
-}
-
-/* Imagens */
 img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 img:hover {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-  /* Efeito de brilho */
+    transform: scale(1.05);
 }
 
-/* Home */
-#home {
-  background: #000000;
-  color: #007981;
-  padding: 60px;
-  text-align: center;
+a {
+    text-decoration: none;
+    color: #00121b;
+    /* Cor de destaque azul escuro */
+    transition: color 0.3s ease;
 }
 
-#home button {
-  background-color: #ffd700;
-  color: #f5de13;
-  padding: 20px 40px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  border-radius: 10px;
-  transition: background 0.3s, transform 0.3s;
+a:hover {
+    color: #ff6f61;
+    /* Cor vibrante ao passar o mouse */
 }
 
-#home button:hover {
-  background-color: #ffaa00;
-  transform: scale(1.1);
+/* Links de navegação */
+nav a {
+    margin: 0 15px;
+    font-weight: 600;
+    color: #008fa8;
+    /* Azul */
+    transition: color 0.3s ease;
 }
 
-/* Formulários */
-form {
-  max-width: 500px;
-  margin: 30px auto;
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+nav a:hover {
+    color: #ff6f61;
+    /* Cor vibrante ao passar o mouse */
 }
 
-form label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-form input,
-form textarea,
-form button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-  border-radius: 8px;
-  border: 1px solid #007981;
-  font-size: 1em;
-}
-
-form button {
-  background-color: #007981;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-}
-
-form button:hover {
-  background-color: #004146;
-  transform: scale(1.05);
+/* Seção content */
+.content {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Rodapé */
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #011e36;
-  color: #003330;
-  font-size: 0.9rem;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    background-color: #017d86;
+    /* Azul escuro para o rodapé */
+    color: #e6e6e6;
+    /* Texto claro para contraste */
+    font-size: 0.9rem;
+    border-top: 3px solid #ff6f61;
+    /* Cor vibrante de destaque */
 }
 
-/* Conteúdo */
-.content {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
 
-/* Scroll suave e efeitos modernos */
-html {
-  scroll-behavior: smooth;
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-/* Efeitos de scroll (parallax ou similar) */
-section {
-  padding: 60px 20px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
+    li {
+        padding: 15px;
+    }
 
-section:hover {
-  transform: translateY(-10px);
-  /* Efeito de movimento no scroll */
+    .content {
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
 }
