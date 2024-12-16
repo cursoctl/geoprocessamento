@@ -8,20 +8,15 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     background-color: #f4f7f6;
-    /* Fundo claro e neutro */
     color: #333;
-    /* Texto escuro para boa legibilidade */
 }
 
 header {
     text-align: center;
     padding: 30px;
-    background-color: #005b6b;
-    /* Azul claro*/
+    background: linear-gradient(90deg, #005b6b, #017d86);
     color: #ffffff;
-
     border-bottom: 3px solid #ff6f61;
-    /* Cor vibrante de destaque */
 }
 
 h1 {
@@ -44,16 +39,19 @@ h1 {
 ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 li {
-    margin-bottom: 20px;
+    width: calc(33.333% - 20px);
+    /* Cards em layout flexível */
     background-color: #ffffff;
-    /* Fundo branco para cards */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    /* Sombras suaves */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -77,66 +75,65 @@ img:hover {
 
 a {
     text-decoration: none;
-    color: #00121b;
-    /* Cor de destaque azul escuro */
-    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #005b6b;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
 }
 
 a:hover {
-    color: #ff6f61;
-    /* Cor vibrante ao passar o mouse */
+    background-color: #ff6f61;
+    transform: scale(1.05);
 }
 
 /* Links de navegação */
+nav {
+    margin: 20px 0;
+}
+
 nav a {
     margin: 0 15px;
     font-weight: 600;
     color: #008fa8;
-    /* Azul */
     transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #ff6f61;
-    /* Cor vibrante ao passar o mouse */
 }
 
-/* Seção content */
 .content {
     padding: 30px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
+    /* Centraliza o conteúdo */
 }
 
-/* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #017d86;
-    /* Azul escuro para o rodapé */
     color: #e6e6e6;
-    /* Texto claro para contraste */
     font-size: 0.9rem;
     border-top: 3px solid #ff6f61;
-    /* Cor vibrante de destaque */
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
+@media (max-width: 1024px) {
     li {
-        padding: 15px;
+        width: calc(50% - 20px);
     }
+}
 
-    .content {
-        padding: 15px;
+@media (max-width: 768px) {
+    li {
+        width: calc(100% - 20px);
     }
 
     nav a {
