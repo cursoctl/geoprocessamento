@@ -23,5 +23,5 @@ Este é um sistema para visualização e análise de dados geoespaciais.
 ## Como rodar
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/cursoctl/devbr/geoprocessamento-django.git
+   git clone https://github.com/cursoctl/geoprocessamento-django.git
    cd geoprocessamento-django
