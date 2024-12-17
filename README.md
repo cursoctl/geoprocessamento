@@ -1,8 +1,3 @@
-## Status do Projeto
-Este projeto está em desenvolvimento. As próximas etapas incluem:
-- Melhorar o design das páginas.
-- Implementar o upload de arquivos.
-- Criar testes automatizados.
 
 #### **Site de Geoprocessamento**
 ```markdown
