@@ -7,20 +7,20 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: #e5ff00;
+    background-color: #f4f7f6;
     /* Fundo claro e neutro */
-    color: #eeff00;
+    color: #333;
     /* Texto escuro para boa legibilidade */
 }
 
 header {
     text-align: center;
     padding: 30px;
-    background-color: #ffc60b;
+    background-color: #005b6b;
     /* Azul claro*/
-    color: #dd0000;
+    color: #ffffff;
 
-    border-bottom: 3px solid #d31200;
+    border-bottom: 3px solid #ff6f61;
     /* Cor vibrante de destaque */
 }
 
@@ -83,7 +83,7 @@ a {
 }
 
 a:hover {
-    color: #be1000;
+    color: #ff6f61;
     /* Cor vibrante ao passar o mouse */
 }
 
@@ -91,13 +91,13 @@ a:hover {
 nav a {
     margin: 0 15px;
     font-weight: 600;
-    color: #f00000;
+    color: #008fa8;
     /* Azul */
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #800b00;
+    color: #ff6f61;
     /* Cor vibrante ao passar o mouse */
 }
 
@@ -112,12 +112,12 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #6d7500;
+    background-color: #017d86;
     /* Azul escuro para o rodapé */
-    color: #b10000;
+    color: #e6e6e6;
     /* Texto claro para contraste */
     font-size: 0.9rem;
-    border-top: 3px solid #ff1500;
+    border-top: 3px solid #ff6f61;
     /* Cor vibrante de destaque */
 }
 
